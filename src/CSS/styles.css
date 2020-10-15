@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #100e01;
+    /* background: #ffe; */
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+button {
+    position: relative;
+    margin: 50px;
+}
+
+.static {
+    overflow: hidden;
+
+    width: 88px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+
+    background: #2eac07;
+    color: #fff;
+    box-shadow: 0 0 0.5rem rgba(248, 246, 246, 0.3);
+
+    cursor: pointer;
+
+    transition: 400ms;
+}
+.magnetic {
+    overflow: hidden;
+
+    width: 88px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+
+    background: #b90e8e;
+    color: #fff;
+    box-shadow: 0 0 0.5rem rgba(245, 209, 5, 0.3);
+
+    cursor: pointer;
+
+    transition: 400ms;
+}
+.gorgeous {
+    overflow: hidden;
+
+    width: 88px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+
+    background: #6098e2;
+    color: #fff;
+    box-shadow: 0 0 0.5rem rgba(245, 209, 5, 0.3);
+
+    cursor: pointer;
+
+    transition: 400ms;
+}
+
+.gorgeous {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.gorgeous:hover{
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+.gorgeous:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+}
+button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+
+    width: 200px;
+    height: 100%;
+
+    background: lawngreen;
+    filter: blur(25px);
+    border-radius: inherit;
+
+    transform: translateY(10px) scale(0.8);
+}
+
+span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transition: scale(0);
+    animation: ripple 600ms linear;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
